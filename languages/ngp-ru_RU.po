@@ -1,0 +1,424 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Geo Phone Master v1.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-02-04 07:37+0000\n"
+"PO-Revision-Date: 2019-02-05 09:54+0000\n"
+"Last-Translator: Nor1m <nor1msoft@mail.ru>\n"
+"Language-Team: Русский\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n%100/10==1 ? 2 : n%10==1 ? 0 : (n+9)%10>3 ?"
+" 2 : 1;\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Poedit-Language: Russian\n"
+"X-Poedit-Country: RUSSIA\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;"
+"_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;\n"
+"X-Poedit-Basepath: \n"
+"X-Poedit-Bookmarks: \n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Textdomain-Support: yes\n"
+"Language: ru_RU\n"
+"X-Loco-Version: 2.2.0; wp-5.0.3"
+
+#: nor1m-geo-phone-master-theme.php:79
+msgid "Custom styles"
+msgstr "Произвольные стили для виджета"
+
+#: includes/class-ngp-controller.php:53
+msgid "Settings file successfully generated!"
+msgstr "Файл настроек успешно сгенерирован!"
+
+#: includes/class-ngp-controller.php:54
+msgid "Load"
+msgstr "Загрузить"
+
+#: includes/class-ngp-controller.php:70
+msgid "The file is too large! (max 10 MB)"
+msgstr "Файл слишком большого размера! (макс 10мб)"
+
+#: includes/class-ngp-controller.php:72
+msgid "Available JSON file type"
+msgstr "Доступный тип файла - JSON"
+
+#: includes/class-ngp-controller.php:74
+msgid "Shorten file name (max 30 characters)"
+msgstr "Сократите название файла (макс 30 символов)"
+
+#: includes/class-ngp-controller.php:104
+msgid "The data was successfully imported."
+msgstr "Данные успешно импортированы."
+
+#: includes/class-ngp-controller.php:117 includes/class-ngp-controller.php:161
+#: includes/class-ngp-controller.php:176
+msgid "The data was successfully deleted."
+msgstr "Данные успешно удалены."
+
+#: includes/class-ngp-controller.php:134 includes/class-ngp-controller.php:146
+msgid "The settings are successfully saved."
+msgstr "Настройки успешно сохранены."
+
+#: includes/class-ngp-controller.php:436
+msgid "Your city"
+msgstr "Ваш город"
+
+#: includes/class-ngp-controller.php:438 nor1m-geo-phone-master-themes.php:53
+msgid "No, select city"
+msgstr "Нет, выбрать город"
+
+#: includes/class-ngp-controller.php:439 nor1m-geo-phone-master-themes.php:54
+msgid "Yes"
+msgstr "Да"
+
+#: nor1m-geo-phone-master-admin.php:9
+#: nor1m-geo-phone-master-import-export.php:15
+#: nor1m-geo-phone-master-import-export.php:24
+#: nor1m-geo-phone-master-popup.php:9 nor1m-geo-phone-master-setting.php:9
+#: nor1m-geo-phone-master-setting.php:17 nor1m-geo-phone-master-themes.php:10
+msgid "Access denied"
+msgstr "Доступ запрещен"
+
+#: nor1m-geo-phone-master-admin.php:19 nor1m-geo-phone-master-help.php:22
+#: nor1m-geo-phone-master.php:152
+msgid "Geo targeting"
+msgstr "Гео таргетинг"
+
+#: nor1m-geo-phone-master-admin.php:24 nor1m-geo-phone-master-popup.php:24
+msgid "Rules"
+msgstr "Правила"
+
+#: nor1m-geo-phone-master-admin.php:27 nor1m-geo-phone-master-popup.php:27
+msgid "<b>Tip: </b> Leave blank if it is not necessary to consider"
+msgstr "<b>Подсказка: </b> Оставьте поле пустым, если его не нужно учитывать"
+
+#: nor1m-geo-phone-master-admin.php:50 nor1m-geo-phone-master-popup.php:46
+#: nor1m-geo-phone-master.php:128
+msgid "Rule"
+msgstr "Правило"
+
+#: nor1m-geo-phone-master-admin.php:51 nor1m-geo-phone-master-popup.php:47
+#: nor1m-geo-phone-master.php:129
+msgid "Remove"
+msgstr "Удалить"
+
+#: nor1m-geo-phone-master-admin.php:52 nor1m-geo-phone-master-popup.php:48
+msgid "Get shortcode"
+msgstr "Получить шорткод"
+
+#: nor1m-geo-phone-master-admin.php:53 nor1m-geo-phone-master-popup.php:49
+msgid "View"
+msgstr "Показать"
+
+#: nor1m-geo-phone-master-admin.php:58 nor1m-geo-phone-master-popup.php:54
+msgid "Rule name"
+msgstr "Имя правила"
+
+#: nor1m-geo-phone-master-admin.php:62 nor1m-geo-phone-master.php:132
+msgid "Label"
+msgstr "Ярлык"
+
+#: nor1m-geo-phone-master-admin.php:66 nor1m-geo-phone-master.php:134
+msgid "Condition"
+msgstr "Условие"
+
+#: nor1m-geo-phone-master-admin.php:68 nor1m-geo-phone-master.php:135
+msgid "True"
+msgstr "Верно"
+
+#: nor1m-geo-phone-master-admin.php:69 nor1m-geo-phone-master.php:136
+msgid "False"
+msgstr "Верно"
+
+#: nor1m-geo-phone-master-admin.php:73 nor1m-geo-phone-master.php:133
+#: nor1m-geo-phone-master.php:137
+msgid "Country"
+msgstr "Страна"
+
+#: nor1m-geo-phone-master-admin.php:77 nor1m-geo-phone-master.php:138
+msgid "Region"
+msgstr "Регион"
+
+#: nor1m-geo-phone-master-admin.php:81 nor1m-geo-phone-master-popup.php:58
+#: nor1m-geo-phone-master.php:139
+msgid "City"
+msgstr "Город"
+
+#: nor1m-geo-phone-master-admin.php:85 nor1m-geo-phone-master.php:140
+msgid "Data"
+msgstr "Данные"
+
+#: nor1m-geo-phone-master-admin.php:95 nor1m-geo-phone-master-help.php:14
+#: nor1m-geo-phone-master-help.php:17 nor1m-geo-phone-master-help.php:24
+#: nor1m-geo-phone-master-help.php:27 nor1m-geo-phone-master-help.php:35
+#: nor1m-geo-phone-master-help.php:38 nor1m-geo-phone-master-help.php:46
+#: nor1m-geo-phone-master-help.php:49 nor1m-geo-phone-master-help.php:57
+#: nor1m-geo-phone-master-help.php:60 nor1m-geo-phone-master-help.php:68
+#: nor1m-geo-phone-master-help.php:71
+msgid "Shortcode:"
+msgstr "Шорткод:"
+
+#: nor1m-geo-phone-master-admin.php:95
+msgid "Default"
+msgstr "По умолчанию"
+
+#: nor1m-geo-phone-master-admin.php:99 nor1m-geo-phone-master-popup.php:76
+msgid "Add rule"
+msgstr "Добавить правило"
+
+#: nor1m-geo-phone-master-admin.php:100 nor1m-geo-phone-master-popup.php:77
+#: nor1m-geo-phone-master-setting.php:62 nor1m-geo-phone-master-themes.php:78
+msgid "Save"
+msgstr "Сохранить"
+
+#: nor1m-geo-phone-master-help.php:2 nor1m-geo-phone-master.php:155
+msgid "Help"
+msgstr "Справка"
+
+#: nor1m-geo-phone-master-help.php:7
+msgid "Information"
+msgstr "Информация"
+
+#: nor1m-geo-phone-master-help.php:12
+msgid "Multi-city widget"
+msgstr "Мульти-город виджет"
+
+#: nor1m-geo-phone-master-help.php:14 nor1m-geo-phone-master-popup.php:72
+msgid "The default city"
+msgstr "Город по умолчанию"
+
+#: nor1m-geo-phone-master-help.php:14 nor1m-geo-phone-master-popup.php:72
+msgid "The default link"
+msgstr "Ссылка по умолчанию"
+
+#: nor1m-geo-phone-master-help.php:16 nor1m-geo-phone-master-help.php:26
+#: nor1m-geo-phone-master-help.php:37 nor1m-geo-phone-master-help.php:48
+#: nor1m-geo-phone-master-help.php:59 nor1m-geo-phone-master-help.php:70
+msgid "Examle:"
+msgstr "Пример:"
+
+#: nor1m-geo-phone-master-help.php:17
+msgid "Moscow:"
+msgstr "Москва:"
+
+#: nor1m-geo-phone-master-help.php:24
+msgid "Value if the condition is not met"
+msgstr "Значение, если условие не выполнилось"
+
+#: nor1m-geo-phone-master-help.php:28 nor1m-geo-phone-master-help.php:39
+#: nor1m-geo-phone-master-help.php:50 nor1m-geo-phone-master-help.php:61
+#: nor1m-geo-phone-master-help.php:72
+msgid "Examle response:"
+msgstr "Пример ответа:"
+
+msgid "Example of use:"
+msgstr "Пример использования:"
+
+msgid "Geo targeting: print region lon"
+msgstr "Гео таргетинг: вывод долготы региона"
+
+msgid "Geo targeting: print region lat"
+msgstr "Гео таргетинг: вывод широты региона"
+
+msgid "Geo targeting: print country lon"
+msgstr "Гео таргетинг: вывод долготы страны"
+
+msgid "Geo targeting: print country lat"
+msgstr "Гео таргетинг: вывод широты страны"
+
+msgid "Geo targeting: print country ISO"
+msgstr "Гео таргетинг: вывод ISO кода страны"
+
+msgid "Geo targeting: print region ISO"
+msgstr "Гео таргетинг: вывод ISO кода региона"
+
+#: nor1m-geo-phone-master-help.php:33
+msgid "Geo targeting: print country"
+msgstr "Гео таргетинг: вывод страны"
+
+#: nor1m-geo-phone-master-help.php:39
+msgid "Russia"
+msgstr "Россия"
+
+msgid "Test"
+msgstr "Тестировать"
+
+msgid "Animation"
+msgstr "Анимация"
+
+msgid "Click me"
+msgstr "Нажми на меня"
+
+#: nor1m-geo-phone-master-help.php:44
+msgid "Geo targeting: print region"
+msgstr "Гео таргетинг: вывод региона"
+
+#: nor1m-geo-phone-master-help.php:50
+msgid "Florida:"
+msgstr "Флорида:"
+
+#: nor1m-geo-phone-master-help.php:55
+msgid "Geo targeting: print city"
+msgstr "Гео таргетинг: вывод города"
+
+#: nor1m-geo-phone-master-help.php:61
+msgid "New-York:"
+msgstr "Нью-Йорк:"
+
+#: nor1m-geo-phone-master-help.php:66
+msgid "Geo targeting: print IP"
+msgstr "Гео таргетинг: вывод IP"
+
+#: nor1m-geo-phone-master-help.php:77
+msgid "List of allowed tags and attributes for geotargeting rules"
+msgstr "Список разрешенных тегов и атрибутов для правил геотаргетинга"
+
+#: nor1m-geo-phone-master-help.php:82
+msgid "tag"
+msgstr "метка"
+
+#: nor1m-geo-phone-master-help.php:83
+msgid "attribute"
+msgstr "атрибут"
+
+#: nor1m-geo-phone-master-help.php:119
+msgid "You can contact me"
+msgstr "Связь со мной"
+
+#: nor1m-geo-phone-master-help.php:120
+msgid "Developer site"
+msgstr "Сайт разработчика"
+
+#: nor1m-geo-phone-master-help.php:121
+msgid "Donate"
+msgstr "Пожертвовать"
+
+#: nor1m-geo-phone-master-import-export.php:31 nor1m-geo-phone-master.php:157
+msgid "Import-export"
+msgstr "Импорт/Экспорт"
+
+#: nor1m-geo-phone-master-import-export.php:36
+msgid "Export"
+msgstr "Экспорт"
+
+#: nor1m-geo-phone-master-import-export.php:43
+msgid "To generate the settings file"
+msgstr "Сгенерировать файл настроек"
+
+#: nor1m-geo-phone-master-import-export.php:50
+msgid "Import"
+msgstr "Импорт"
+
+#: nor1m-geo-phone-master-import-export.php:53
+msgid "<b> Warning: </b> all old data will be overwritten! </b>"
+msgstr "<b>Внимание: </b> Все старые данные будут перезаписаны!"
+
+#: nor1m-geo-phone-master-import-export.php:56
+msgid "Select file"
+msgstr "Выбрать файл"
+
+#: nor1m-geo-phone-master-import-export.php:59
+msgid "Download"
+msgstr "Скачать"
+
+#: nor1m-geo-phone-master-popup.php:19 nor1m-geo-phone-master.php:153
+msgid "Multi-city"
+msgstr "Мульти-город"
+
+#: nor1m-geo-phone-master-popup.php:62 nor1m-geo-phone-master.php:141
+msgid "Link"
+msgstr "Ссылка"
+
+#: nor1m-geo-phone-master-popup.php:72
+msgid "Shortcode"
+msgstr "Шорткод"
+
+#: nor1m-geo-phone-master-setting.php:30
+msgid "Plugin settings"
+msgstr "Настройки плагина"
+
+#: nor1m-geo-phone-master-setting.php:35 nor1m-geo-phone-master.php:154
+msgid "Settings"
+msgstr "Настройки"
+
+#: nor1m-geo-phone-master-setting.php:39
+msgid "Class for the selection widget of the city"
+msgstr "Class для виджета выбора города"
+
+#: nor1m-geo-phone-master-setting.php:42
+msgid "Id for the selection widget of the city"
+msgstr "Id для виджета выбора города"
+
+#: nor1m-geo-phone-master-setting.php:45 nor1m-geo-phone-master-setting.php:51
+msgid "Select the language to work with geo database"
+msgstr "Выберите язык для работы с гео бд"
+
+#: nor1m-geo-phone-master-setting.php:53
+msgid "A constant containing the user's IP"
+msgstr "Константа содержащяя IP пользователя"
+
+#: nor1m-geo-phone-master-setting.php:56
+msgid ""
+"<b>Example: </b> If you specify a Russian, instead Москва need to write "
+"Moscow. Default: English."
+msgstr ""
+"<b>Например: </b> Если указан English, то вместо Москва нужно писать Moscow. "
+"По умолчанию: Русский."
+
+#: nor1m-geo-phone-master-setting.php:67
+msgid "Reset"
+msgstr "Сброс"
+
+#: nor1m-geo-phone-master-setting.php:73
+msgid ""
+"<b> Warning! </b> When you reset, you delete all the plugin settings, "
+"including rules."
+msgstr ""
+"<b>Внимание! </b> При сбросе удаляются все настройки плагина, включая "
+"правила."
+
+#: nor1m-geo-phone-master-setting.php:75
+msgid "Reset all data"
+msgstr "Сброс все данных"
+
+#: nor1m-geo-phone-master-themes.php:23
+msgid "Theme widgets"
+msgstr "Темы виджета"
+
+#: nor1m-geo-phone-master-themes.php:32
+msgid "The theme of the widget"
+msgstr "Тема виджета"
+
+#: nor1m-geo-phone-master-themes.php:46 nor1m-geo-phone-master-themes.php:58
+msgid "Moscow"
+msgstr "Москва"
+
+#: nor1m-geo-phone-master-themes.php:50
+msgid "Your city is Moscow ?"
+msgstr "Ваш город Москва ?"
+
+#: nor1m-geo-phone-master-themes.php:59
+msgid "New York"
+msgstr "Нью-Йорк"
+
+#: nor1m-geo-phone-master-themes.php:60
+msgid "Beijing"
+msgstr "Пекин"
+
+#: nor1m-geo-phone-master-themes.php:61
+msgid "Kiev"
+msgstr "Киев"
+
+#: nor1m-geo-phone-master.php:130
+msgid "View/Hide"
+msgstr "Показать/Скрыть"
+
+#: nor1m-geo-phone-master.php:131
+msgid "RuleName"
+msgstr "Имя правила"
+
+#: nor1m-geo-phone-master.php:156
+msgid "Widget themes"
+msgstr "Темы виджета"
