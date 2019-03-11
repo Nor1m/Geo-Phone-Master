@@ -31,6 +31,9 @@ The plugin is designed to allow the user to receive data depending on their geog
 6. Theme http://prntscr.com/kzmudb
 7. Import/Export http://prntscr.com/kzmuhs
 
+## Demo
+http://ngpm.syberia-shop.ru/test-geo-phone-master/
+
 ## Shortcodes
 
 #### Геотаргетинг
