@@ -6,6 +6,15 @@
         public function msg( $mode, $data ) {
         	echo '<div class="ngp_alert notice notice-' . $mode . ' is-dismissible"><p>' . $data . '</p></div>';
         }
+    
+        // функция вывода сообщений
+        public function msgPopup( $mode, $data, $btns ) {
+            echo '<div class="ngp_msg_popup">';
+                echo '<div class="ngp_alert_popup popup_notice-' . $mode . '"><p>' . $data . '</p>';
+                    echo '<div class="ngp_popup_buttons">' . $btns . '</div>';
+                echo '</div>';
+            echo '</div>';
+        }
         
         // функция экпорта данных
         public function export() {
@@ -236,9 +245,23 @@
         		define( "NGP_USER_IP", $_SERVER['REMOTE_ADDR'] );
         	}
         }
+    
+        // проверка на существование гео бд
+        public function issetGeoDat() {
+            if ( ! NGP_ISSET_SX_GEO_DB ) {
+                $this->msgPopup( 
+                    'warning', 
+                    __('To start the plugin, you need to install GeoDatabase','ngp'), 
+                    '<button id="start_install_db">' . __('Start installation','ngp') . '</button>'.
+                    '<button id="skip_install_db">' . __('Skip','ngp') . '</button>'
+                );
+                return false;
+            }
+        }
         
         // полная информация по IP
-        public function theGeo( $SxGeo_NGP ) {
+        public function theGeo() {
+            $SxGeo_NGP = new SxGeo_NGP( NGP_SX_GEO_DB );
             $info = $SxGeo_NGP->getCityFull( NGP_USER_IP );
             define( "NGP_USER_COUNTRY", strtolower( $info['country'][ NGP_LANG_DATA ] ) );
             define( "NGP_USER_REGION", strtolower( $info['region'][ NGP_LANG_DATA ] ) );

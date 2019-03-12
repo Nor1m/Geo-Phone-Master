@@ -1,6 +1,7 @@
-*{
+* {
     box-sizing: border-box;
 }
+
 .help_items .item_box {
     position: relative;
     display: flex;
@@ -8,29 +9,34 @@
     margin-right: -10px;
     flex-wrap: wrap;
 }
+
 .nscp_block_popup {
-    display:  inline-block;
+    display: inline-block;
     z-index: 99;
-    position:  relative;
+    position: relative;
 }
-.nscp_block_popup *{
+
+.nscp_block_popup * {
     outline: none !important;
 }
+
 .nscp_select_city_parent {
     padding: 15px 5px 0 5px;
-    display:  none;
+    display: none;
     width: 100%;
     max-width: 240px;
 }
+
 .nscp_select_city {
     overflow-x: hidden;
     overflow-y: auto;
     max-height: 200px;
     text-align: left;
 }
-.nscp_select_city a{
+
+.nscp_select_city a {
     width: 100%;
-    display:  inline-block;
+    display: inline-block;
     padding: 6px 0;
     background: #fff;
     margin-bottom: 4px;
@@ -43,11 +49,13 @@
     line-height: 1.7;
     text-align: center;
 }
-.nscp_select_city a:hover{
+
+.nscp_select_city a:hover {
     background: #0095ff;
     cursor: pointer;
     color: #fff;
 }
+
 a.nscp_city {
     color: #fbfbfb;
     border-bottom: 1px dashed #dedede;
@@ -55,77 +63,91 @@ a.nscp_city {
     margin: 0 10px;
     padding: 10px 15px;
 }
+
 .nscp_simple_vidget a.nscp_city {
     text-transform: none !important;
 }
 
-a.nscp_city:hover{
+a.nscp_city:hover {
     cursor: pointer;
     color: #ffffff;
     border-color: #fff;
 }
-.nscp_popover .nscp_arrow{
+
+.nscp_popover .nscp_arrow {
     top: -20px;
-    position:  absolute;
+    position: absolute;
     border: 10px solid transparent;
     border-bottom: 10px solid #495052;
     margin-left: 115px;
 }
-.nscp_popover_parent_block.active{
+
+.nscp_popover_parent_block.active {
     display: inline-block !important;
 }
+
 .nscp_top_buttons {
     padding: 15px 5px 0 5px;
 }
+
 button.nscp_btn_no {
     width: calc(100% - 57px);
     margin-right: 3px;
 }
+
 button.nscp_btn_yes {
     width: 50px;
 }
-.nscp_popover{
+
+.nscp_popover {
     display: inline-block;
     border-radius: 3px;
-    position:  absolute;
+    position: absolute;
     width: 250px;
-    text-align:  center;
+    text-align: center;
     background: rgb(73, 80, 82);
     padding: 15px 5px 10px 5px;
     margin-left: -80px;
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
     margin-top: 0px;
 }
+
 .nscp_popover_parent_block {
-    position:  absolute;
-    display:  none;
+    position: absolute;
+    display: none;
 }
+
 h3.nscp_popover_title {
     color: #fff;
     font-size: 18px;
     margin: 5px 0;
-    opacity:  1;
+    opacity: 1;
     line-height: 1.5;
 }
+
 .nscp_popover_parent_block {
     padding-top: 20px;
-    width:  100%;
+    width: 100%;
 }
+
 .ngp_container {
     display: flex;
 }
+
 .nscp_simple_vidget_list {
     min-width: 200px;
     margin: 0 10px;
 }
-.nscp_popover_content button{
-    border:  none;
+
+.nscp_popover_content button {
+    border: none;
     padding: 7px 12px;
     border-radius: 2px;
     border-bottom: 2px solid rgba(0, 0, 0, 0.13);
     background: white;
     line-height: 1.7;
 }
+
 .nscp_simple_vidget {
     background: #6b6b6b;
     padding: 15px;
@@ -133,44 +155,52 @@ h3.nscp_popover_title {
     border-radius: 3px;
     text-align: center;
 }
-.ngp_theme_flat_blue .nscp_popover_content button:hover{
+
+.ngp_theme_flat_blue .nscp_popover_content button:hover {
     background: #0095ff;
     cursor: pointer;
     color: #fff;
 }
-.ngp_select_city .item,
-.ngp_select_city .item_button{
-    display:  inline-block;
+
+.ngp_select_city .item, .ngp_select_city .item_button {
+    display: inline-block;
     width: calc(25% - 4px);
 }
-p.ngp_head_simple{
+
+p.ngp_head_simple {
     color: #585858;
     font-size: 16px !important;
 }
-.ngp_select_city .item input{
+
+.ngp_select_city .item input {
     width: calc(100% - 4px);
     vertical-align: baseline;
 }
-.ngp_select_city .item select{
+
+.ngp_select_city .item select {
     width: calc(100% - 4px);
     vertical-align: baseline;
 }
-.ngp_select_city .item_full{
-    display:  inline-block;
+
+.ngp_select_city .item_full {
+    display: inline-block;
     width: 100%;
     margin-top: 10px;
 }
-.ngp_select_city .item_button button{
+
+.ngp_select_city .item_button button {
     vertical-align: baseline;
 }
+
 .ngp_select_city {
     padding: 0;
     box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.1);
     margin: 15px 0;
     /* box-shadow: 0px 10px 15px -5px rgba(78, 102, 255, 0.45); */
     border-radius: 3px;
-    overflow:  hidden;
+    overflow: hidden;
 }
+
 .head_item {
     cursor: default;
     color: #fff;
@@ -178,48 +208,59 @@ p.ngp_head_simple{
     border-radius: 3px 3px 0 0;
     background: linear-gradient(to right, rgb(118, 71, 230), rgb(93, 79, 214), rgb(116, 94, 239), rgb(78, 102, 255));
 }
-.head_item b{
+
+.head_item b {
     padding: 10px 10px;
-    display:  inline-block;
+    display: inline-block;
 }
-.ngp_select_city:hover .head_item{
-    cursor:  default;
+
+.ngp_select_city:hover .head_item {
+    cursor: default;
 }
-.head_item a{
+
+.head_item a {
     float: right;
     padding: 10px;
-    display:  inline-block;
-    position:  relative;
+    display: inline-block;
+    position: relative;
     color: rgba(255, 255, 255, 0.8);
 }
-.toggle_item{
+
+.toggle_item {
     background: rgba(0, 0, 0, 0.01);
     color: #777;
 }
-.toggle_item:hover{
+
+.toggle_item:hover {
     background: rgba(0, 0, 0, 0.07);
 }
-.remove_item:hover{
+
+.remove_item:hover {
     background: rgba(0, 0, 0, 0.07);
 }
-.remove_item{
+
+.remove_item {
     background: rgba(0, 0, 0, 0.01);
 }
-.head_item a:hover{
+
+.head_item a:hover {
     cursor: pointer;
     color: #fff;
 }
+
 p.btn_block_inline {
     display: inline-block;
     width: auto;
 }
+
 .ngp_select_city .items {
     padding: 10px 0px 10px 10px;
     border: 1px solid #a395ef;
-    border-top:  none;
+    border-top: none;
     border-radius: 0 0 4px 4px;
     background: #fdfdfd;
 }
+
 .button.button-warning {
     background: #ca1543;
     border-color: #b70532 #d20b38 #c30c3b;
@@ -227,48 +268,54 @@ p.btn_block_inline {
     color: #fff;
     text-decoration: none;
 }
-.button.button-warning:hover{
+
+.button.button-warning:hover {
     background: #d61849;
     border-color: #b70532 #bb052e #c30c3b;
     box-shadow: 0 1px 0 #940b2e;
     color: #fff;
     text-decoration: none;
 }
-.ngp_shortcode input{
+
+.ngp_shortcode input {
     background: rgb(255, 255, 255);
     padding: 4px 10px;
     border: 1px solid #eaeaea;
     box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.02);
     width: 100%;
-    display:  inline-block;
+    display: inline-block;
 }
-.ngp_setting_items{
+
+.ngp_setting_items {
     background: #fdfdfd;
     margin: 15px 0;
-    padding:  10px;
+    padding: 10px;
     box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.08);
     border-radius: 1px 1px 3px 3px;
     border-top: 3px solid #7c6bef;
 }
-.help_items .item{
+
+.help_items .item {
     background: #fdfdfd;
     margin: 20px 0;
     padding: 0;
     box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.08);
     border-radius: 2px 2px 3px 3px;
-    overflow:  hidden;
+    overflow: hidden;
 }
-.help_items .item_info{
+
+.help_items .item_info {
     background: #fdfdfd;
     margin: 10px 0;
     padding: 0;
     box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.08);
     border-radius: 2px 2px 3px 3px;
-    overflow:  hidden;
+    overflow: hidden;
 }
-.help_items .item_info label{
+
+.help_items .item_info label {
     font-size: 16px;
-    display:  inline-block;
+    display: inline-block;
     padding: 7px 10px;
     width: 100%;
     font-weight: 500;
@@ -277,47 +324,55 @@ p.btn_block_inline {
     background: linear-gradient(to right, rgb(12, 206, 18), rgb(131, 230, 90));
     margin-bottom: 10px;
 }
-.help_items .item_info b{
+
+.help_items .item_info b {
     color: #33bb55;
     font-size: 16px;
     display: inline-block;
     width: 80px;
 }
-.help_items .item_info b:after{
+
+.help_items .item_info b:after {
     content: '>';
     font-size: 15px;
     color: #74dcce;
 }
-.help_items .item_info b:before{
+
+.help_items .item_info b:before {
     content: '<';
     font-size: 15px;
     color: #74dcce;
 }
-.help_items .allowed_tags table{
+
+.help_items .allowed_tags table {
     margin: 0 10px 10px 10px;
     border-collapse: collapse;
 }
-.help_items .allowed_tags table tr{
-    text-align:  center;
+
+.help_items .allowed_tags table tr {
+    text-align: center;
 }
 
-.help_items .allowed_tags tr.ngp_head_table td{
-    font-weight:  bold;
+.help_items .allowed_tags tr.ngp_head_table td {
+    font-weight: bold;
     color: #777;
 }
-.help_items .allowed_tags table td{
+
+.help_items .allowed_tags table td {
     border: 1px solid #eaeaea;
     padding: 10px 15px;
     color: #389070;
 }
+
 .help_items .item_box .item {
     width: calc(50% - 20px);
     display: inline-block;
     margin: 10px;
 }
-.help_items .item label{
+
+.help_items .item label {
     font-size: 16px;
-    display:  inline-block;
+    display: inline-block;
     padding: 7px 10px;
     width: 100%;
     font-weight: 500;
@@ -327,18 +382,22 @@ p.btn_block_inline {
     margin-bottom: 10px;
     background-size: 101%;
 }
-.item.item_multi label{
+
+.item.item_multi label {
     background: linear-gradient(to right, rgb(116, 170, 247), rgb(78, 145, 253));
 }
-.item.item_geo label{
+
+.item.item_geo label {
     background: linear-gradient(to right, rgb(247, 181, 79), rgb(249, 167, 98));
 }
+
 .ngp_simple {
     background: #f9f9f9;
     padding: 0px 5px 5px 0px;
     margin: 10px 0 0 0;
     border-top: 1px solid #f1f1f1;
 }
+
 .rules_block_form {
     background: #fdfdfd;
     padding: 5px 15px;
@@ -347,49 +406,49 @@ p.btn_block_inline {
     border-radius: 1px 1px 3px 3px;
     border-top: 3px solid #7c6bef;
 }
-.ngp_setting_block select:focus,
-.ngp_setting_block textarea:focus,
-#wp-ngp_custom_styles-editor-container:focus,
-.ngp_setting_block input[type="text"]:focus{
+
+.ngp_setting_block select:focus, .ngp_setting_block textarea:focus, #wp-ngp_custom_styles-editor-container:focus, .ngp_setting_block input[type="text"]:focus {
     border-color: #8170fd !important;
     box-shadow: 0 0 4px rgba(114, 72, 227, 0.5) !important;
 }
+
 .button.button-custom {
     color: #fff;
     box-shadow: 0px 5px 15px -5px rgba(0, 0, 0, 0.33);
     border-radius: 3px;
     background: linear-gradient(to right, rgb(118, 71, 230), rgb(78, 102, 255));
-    border:  none;
+    border: none;
     font-size: 14px;
     height: 33px;
     padding: 0 12px 0 12px;
     margin-right: 2px;
 }
-.button.button-custom:active,
-.button.button-custom:focus,
-.button.button-custom:hover{
+
+.button.button-custom:active, .button.button-custom:focus, .button.button-custom:hover {
     background: linear-gradient(to right, rgba(118, 71, 230, 0.9), rgba(78, 102, 255, 0.9));
     color: #fff;
     box-shadow: 0px 5px 10px rgba(113, 104, 244, 0.34);
 }
+
 .button.button-custom-save {
     color: #fff;
     box-shadow: 0px 5px 15px -5px rgba(0, 0, 0, 0.33);
     border-radius: 3px;
     background: linear-gradient(to right, rgb(8, 191, 132), rgb(39, 197, 51));
-    border:  none;
+    border: none;
     text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
     font-size: 14px;
     height: 33px;
     padding: 0 12px 0 12px;
     margin-right: 2px;
 }
+
 .ngp_custom_file {
     color: #fff;
     box-shadow: 0px 5px 15px -5px rgba(0, 0, 0, 0.33);
     border-radius: 3px;
     background: linear-gradient(to right, rgb(34, 182, 216), rgb(69, 189, 216));
-    border:  none;
+    border: none;
     text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
     font-size: 14px;
     height: 33px;
@@ -400,16 +459,17 @@ p.btn_block_inline {
     font-size: 13px;
     line-height: 31px;
 }
-.ngp_custom_file:active,
-.ngp_custom_file:focus,
-.ngp_custom_file:hover{
+
+.ngp_custom_file:active, .ngp_custom_file:focus, .ngp_custom_file:hover {
     color: #fff;
     background: linear-gradient(to right, rgba(34, 182, 216, 0.9), rgba(69, 189, 216, 0.9));
     box-shadow: 0px 5px 10px rgba(70, 191, 218, 0.34);
 }
+
 .ngp_help_developer {
     margin-top: 20px;
 }
+
 a.ngp_help {
     color: #fff;
     box-shadow: 0px 5px 15px -5px rgba(0, 0, 0, 0.33);
@@ -426,13 +486,13 @@ a.ngp_help {
     background: linear-gradient(to right, rgb(36, 208, 159), rgb(22, 218, 118));
     box-shadow: 0px 5px 10px rgba(21, 221, 143, 0.34);
 }
-.ngp_help:active,
-.ngp_help:focus,
-.ngp_help:hover{
+
+.ngp_help:active, .ngp_help:focus, .ngp_help:hover {
     color: #fff;
     background: linear-gradient(to right, rgba(20, 206, 154, 0.9), rgba(22, 218, 118, 0.9));
     box-shadow: 0px 5px 10px rgba(21, 221, 143, 0.4);
 }
+
 a.ngp_donate {
     color: #fff;
     box-shadow: 0px 5px 15px -5px rgba(0, 0, 0, 0.33);
@@ -449,13 +509,13 @@ a.ngp_donate {
     background: linear-gradient(to right, rgb(253, 177, 64), rgb(251, 185, 65));
     box-shadow: 0px 5px 10px rgba(254, 186, 72, 0.34);
 }
-.ngp_donate:active,
-.ngp_donate:focus,
-.ngp_donate:hover{
+
+.ngp_donate:active, .ngp_donate:focus, .ngp_donate:hover {
     color: #fff;
     background: linear-gradient(to right, rgba(255, 179, 66, 0.9), rgba(253, 191, 77, 0.9));
     box-shadow: 0px 5px 10px rgba(254, 186, 72, 0.4);
 }
+
 a.ngp_developer {
     color: #fff;
     box-shadow: 0px 5px 15px -5px rgba(0, 0, 0, 0.33);
@@ -472,40 +532,40 @@ a.ngp_developer {
     box-shadow: 0px 5px 10px rgba(99, 86, 242, 0.34);
     background: linear-gradient(to right, rgb(118, 71, 230), rgb(78, 102, 255));
 }
-.ngp_developer:active,
-.ngp_developer:focus,
-.ngp_developer:hover{
+
+.ngp_developer:active, .ngp_developer:focus, .ngp_developer:hover {
     color: #fff;
     background: linear-gradient(to right, rgba(118, 71, 230, 0.9), rgba(78, 102, 255, 0.9));
 }
-.button.button-custom-save:active,
-.button.button-custom-save:focus,
-.button.button-custom-save:hover{
+
+.button.button-custom-save:active, .button.button-custom-save:focus, .button.button-custom-save:hover {
     color: #fff;
     background: linear-gradient(to right, rgba(8, 191, 132, 0.9), rgba(39, 197, 51, 0.9));
     box-shadow: 0px 5px 10px rgba(45, 199, 106, 0.34);
 }
+
 .button.button-custom-delete {
     color: #fff;
     box-shadow: 0px 5px 15px -5px rgba(0, 0, 0, 0.33);
     border-radius: 3px;
     background: linear-gradient(to right, rgb(255, 66, 66), rgb(255, 59, 114));
-    border:  none;
+    border: none;
     font-size: 14px;
     height: 33px;
     padding: 0 12px 0 12px;
     margin-right: 2px;
 }
-.button.button-custom-delete:active,
-.button.button-custom-delete:focus,
-.button.button-custom-delete:hover{
+
+.button.button-custom-delete:active, .button.button-custom-delete:focus, .button.button-custom-delete:hover {
     color: #fff;
     background: linear-gradient(to right, rgba(255, 66, 66, 0.9), rgba(255, 59, 114, 0.9));
     box-shadow: 0px 5px 10px rgba(254, 80, 105, 0.34);
 }
+
 .wp-has-current-submenu.toplevel_page_nor1m-gp {
     background: linear-gradient(to right, rgb(118, 71, 230), rgb(78, 102, 255)) !important;
 }
+
 .ngp_shortcode_block {
     background: #fdfdfd;
     padding: 5px 15px;
@@ -515,19 +575,22 @@ a.ngp_developer {
     border-top: 2px solid #7c6bef;
     border-radius: 1px 1px 3px 3px;
 }
-.ngp_shortcode_block p{
+
+.ngp_shortcode_block p {
     margin: 0 !important;
 }
-.help_items p{
+
+.help_items p {
     padding: 0 10px !important;
 }
+
 p.ngp_head_simple {
     display: inline-block;
 }
 
 p.ngp_text_simple {
     display: inline-block;
-    font-family:  monospace;
+    font-family: monospace;
     color: #696969;
     border: 1px dashed #dadada;
 }
@@ -542,31 +605,36 @@ p.ngp_text_simple {
 .nscp_block_popup {
     text-align: left;
 }
+
 #ngp_theme_form select, #ngp_theme_form textarea {
     width: 100% ;
 }
 
 /*---------------------------*/
-
 /* VIDGET THEME GRADIENT */
-.ngp_theme_gradient .nscp_popover{
+.ngp_theme_gradient .nscp_popover {
     background: #fff;
     padding: 0;
 }
-.ngp_theme_gradient .nscp_arrow{
+
+.ngp_theme_gradient .nscp_arrow {
     border-bottom-color: white;
 }
-.ngp_theme_gradient .nscp_popover_title{
+
+.ngp_theme_gradient .nscp_popover_title {
     color: #555;
     padding: 10px;
 }
-.ngp_theme_gradient .nscp_popover_content{
+
+.ngp_theme_gradient .nscp_popover_content {
     padding: 0 10px 10px 10px;
 }
-.ngp_theme_gradient .nscp_top_buttons{
+
+.ngp_theme_gradient .nscp_top_buttons {
     padding: 0;
 }
-.ngp_theme_gradient .nscp_btn_no{
+
+.ngp_theme_gradient .nscp_btn_no {
     color: #fff;
     box-shadow: 0px 5px 15px -5px rgba(0, 0, 0, 0.33);
     border-radius: 3px;
@@ -575,7 +643,8 @@ p.ngp_text_simple {
     font-size: 14px;
     padding: 7px;
 }
-.ngp_theme_gradient .nscp_btn_yes{
+
+.ngp_theme_gradient .nscp_btn_yes {
     color: #fff;
     box-shadow: 0px 5px 15px -5px rgba(24, 194, 91, 0.34);
     border-radius: 3px;
@@ -584,22 +653,24 @@ p.ngp_text_simple {
     padding: 7px;
     background: linear-gradient(to right, rgb(13, 192, 120), rgb(35, 196, 57));
 }
+
 .ngp_save_theme_block {
     padding: 0 10px;
 }
-.ngp_theme_gradient .nscp_select_city a:hover,
-.ngp_theme_gradient .nscp_btn_no:hover,
-.ngp_theme_gradient .nscp_btn_yes:hover{
+
+.ngp_theme_gradient .nscp_select_city a:hover, .ngp_theme_gradient .nscp_btn_no:hover, .ngp_theme_gradient .nscp_btn_yes:hover {
     opacity: .9;
     cursor: pointer;
 }
-.ngp_theme_gradient .nscp_select_city_parent{
+
+.ngp_theme_gradient .nscp_select_city_parent {
     padding: 10px 0 0 0;
 }
-.ngp_theme_gradient .nscp_select_city{
 
+.ngp_theme_gradient .nscp_select_city {
 }
-.ngp_theme_gradient .nscp_select_city a{
+
+.ngp_theme_gradient .nscp_select_city a {
     color: #fff;
     box-shadow: 0px 5px 15px -5px rgba(24, 194, 91, 0.34);
     border-radius: 3px;
@@ -613,33 +684,38 @@ p.ngp_text_simple {
 
 /*---------------------------*/
 /* VIDGET THEME WHITE */
-.ngp_theme_white .nscp_popover{
+.ngp_theme_white .nscp_popover {
     background: #fbfbfb;
     padding: 0;
     box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
 }
-.ngp_theme_white .nscp_arrow{
+
+.ngp_theme_white .nscp_arrow {
     border-bottom-color: #fbfbfb;
 }
-.ngp_theme_white a.nscp_city{
+
+.ngp_theme_white a.nscp_city {
     color: #666;
     background: #fbfbfb;
     padding: 10px 15px;
     border-radius: 3px;
     border: none;
 }
-.ngp_theme_white .nscp_popover_title{
+
+.ngp_theme_white .nscp_popover_title {
     color: #555;
     padding: 10px;
 }
-.ngp_theme_white .nscp_popover_content{
+
+.ngp_theme_white .nscp_popover_content {
     padding: 0 10px 10px 10px;
 }
-.ngp_theme_white .nscp_top_buttons{
+
+.ngp_theme_white .nscp_top_buttons {
     padding: 0;
 }
-.ngp_theme_white .nscp_btn_yes,
-.ngp_theme_white .nscp_btn_no{
+
+.ngp_theme_white .nscp_btn_yes, .ngp_theme_white .nscp_btn_no {
     color: #6b6b6b;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.05);
     border-radius: 3px;
@@ -653,20 +729,21 @@ p.ngp_text_simple {
 .ngp_save_white_block {
     padding: 0 10px;
 }
-.ngp_theme_white .nscp_select_city a:hover,
-.ngp_theme_white .nscp_btn_no:hover,
-.ngp_theme_white .nscp_btn_yes:hover{
+
+.ngp_theme_white .nscp_select_city a:hover, .ngp_theme_white .nscp_btn_no:hover, .ngp_theme_white .nscp_btn_yes:hover {
     cursor: pointer;
     box-shadow: none;
     border: 1px solid #bdbdbd;
 }
-.ngp_theme_white .nscp_select_city_parent{
+
+.ngp_theme_white .nscp_select_city_parent {
     padding: 10px 0 0 0;
 }
-.ngp_theme_white .nscp_select_city{
 
+.ngp_theme_white .nscp_select_city {
 }
-.ngp_theme_white .nscp_select_city a{
+
+.ngp_theme_white .nscp_select_city a {
     margin: 3px 0;
     color: #6b6b6b;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.05);
@@ -679,9 +756,8 @@ p.ngp_text_simple {
 }
 
 /*---------------------------*/
-
 /* VIDGET THEME MODAL */
-.ngp_theme_modal .nscp_popover_parent_block{
+.ngp_theme_modal .nscp_popover_parent_block {
     position: fixed;
     background: rgba(0, 0, 0, 0.4);
     width: 100%;
@@ -690,7 +766,8 @@ p.ngp_text_simple {
     top: 0px;
     z-index: 99999999;
 }
-.ngp_theme_modal .nscp_popover{
+
+.ngp_theme_modal .nscp_popover {
     background: #fff;
     padding: 0;
     position: fixed;
@@ -701,21 +778,26 @@ p.ngp_text_simple {
     left: calc(50% - 200px);
     top: calc(50% - 100px);
 }
-.ngp_theme_modal .nscp_arrow{
+
+.ngp_theme_modal .nscp_arrow {
     display: none;
 }
-.ngp_theme_modal .nscp_popover_title{
+
+.ngp_theme_modal .nscp_popover_title {
     color: #555;
     padding: 10px;
     text-align: left;
 }
-.ngp_theme_modal .nscp_popover_content{
+
+.ngp_theme_modal .nscp_popover_content {
     padding: 0 10px 10px 10px;
 }
-.ngp_theme_modal .nscp_top_buttons{
+
+.ngp_theme_modal .nscp_top_buttons {
     padding: 0;
 }
-.ngp_theme_modal .nscp_btn_no{
+
+.ngp_theme_modal .nscp_btn_no {
     color: #404040;
     border-radius: 3px;
     border: none;
@@ -723,7 +805,8 @@ p.ngp_text_simple {
     padding: 7px;
     background: #e8e8e8;
 }
-.ngp_theme_modal .nscp_btn_yes{
+
+.ngp_theme_modal .nscp_btn_yes {
     color: #fff;
     border-radius: 3px;
     border: none;
@@ -731,22 +814,24 @@ p.ngp_text_simple {
     padding: 7px;
     background: #1ada94;
 }
+
 .ngp_theme_modal {
     padding: 0 10px;
 }
-.ngp_theme_modal .nscp_select_city a:hover,
-.ngp_theme_modal .nscp_btn_no:hover,
-.ngp_theme_modal .nscp_btn_yes:hover{
+
+.ngp_theme_modal .nscp_select_city a:hover, .ngp_theme_modal .nscp_btn_no:hover, .ngp_theme_modal .nscp_btn_yes:hover {
     opacity: .9;
     cursor: pointer;
 }
-.ngp_theme_modal .nscp_select_city_parent{
+
+.ngp_theme_modal .nscp_select_city_parent {
     padding: 10px 0 0 0;
     width: 100%;
     margin-top: 10px;
     max-width: 380px;
 }
-.ngp_theme_modal .nscp_select_city a{
+
+.ngp_theme_modal .nscp_select_city a {
     color: #fff;
     border-radius: 3px;
     background: #1ab5da;
@@ -758,4 +843,80 @@ p.ngp_text_simple {
     float: left;
 }
 
+/* ngp_msg_popup */
+.ngp_msg_popup {
+    background: rgba(0, 0, 0, 0.3);
+    position: fixed;
+    left: -999px;
+    width: 9999px;
+    height: 9999px;
+    top: -999px;
+    z-index: 99999;
+    overflow: hidden;
+}
+
+.ngp_msg_popup .ngp_alert_popup {
+    position: fixed;
+    top: calc(50% - 120px);
+    left: calc(50% - 250px);
+    background: white;
+    width: 500px;
+    height: 240px;
+    border-radius: 5px;
+    padding: 20px;
+    overflow: hidden;
+}
+
+.ngp_msg_popup .ngp_alert_popup p {
+    font-size: 22px;
+    text-align: center;
+    font-weight: bold;
+    color: #8e8e8e;
+    text-transform: uppercase;
+}
+
+.ngp_msg_popup .ngp_alert_popup .ngp_popup_buttons {
+    text-align: center;
+    top: 8px;
+    position: relative;
+}
+
+.ngp_msg_popup .ngp_alert_popup .ngp_popup_buttons button {
+    display: inline-block;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 3px;
+    border: none;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: bold;
+    background-size: 101%;
+    margin: 3px;
+}
+
+
+
+.ngp_msg_popup .ngp_alert_popup .ngp_popup_buttons #start_install_db{
+    background: linear-gradient(to right, rgb(118, 71, 230), rgb(78, 102, 255));
+    box-shadow: 0px 5px 15px -5px rgba(0, 0, 0, 0.33);
+    color: #fff;
+    border: 1px solid rgb(97, 87, 243);
+}
+.ngp_msg_popup .ngp_alert_popup .ngp_popup_buttons #skip_install_db{
+    background: transparent;
+    /* box-shadow: 0px 5px 15px -5px rgba(0, 0, 0, 0.33); */
+    color: #6356f2;
+    border: 1px solid #5760fa;
+}
+
+.ngp_msg_popup .ngp_alert_popup .ngp_popup_buttons #start_install_db:hover{
+    background: linear-gradient(to right, rgba(118, 71, 230, 0.9), rgba(78, 102, 255, 0.9));
+    color: #fff;
+    box-shadow: 0px 5px 10px rgba(113, 104, 244, 0.34);
+    cursor: pointer;
+}
+.ngp_msg_popup .ngp_alert_popup .ngp_popup_buttons #skip_install_db:hover{
+    cursor: pointer;
+    background: rgba(97, 87, 243, 0.07);
+}
 /*---------------------------*/

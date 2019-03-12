@@ -177,6 +177,11 @@
 		}
 	});
 	
+	// закрытие попапа установки геобд
+	jQuery('#skip_install_db').click(function() {
+		jQuery('.ngp_msg_popup').fadeOut(200);
+	})
+	
 	// смена темы в админке
     function ngsc_theme(mode, data){
     	console.log(mode, data);

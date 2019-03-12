@@ -31,6 +31,7 @@
 
     define( "NGP_SX_GEO", dirname( __FILE__ ) . "/includes/class-sx-geo.php" ); // гео контроллер
     define( "NGP_SX_GEO_DB", dirname( __FILE__ ) . "/includes/sx-geo-city.dat" ); // база данных гео
+    define( "NGP_ISSET_SX_GEO_DB", file_exists(NGP_SX_GEO_DB) ); // существование файла гео бд
 	
 	define( "NGP_CONTROLLER", dirname( __FILE__ ) . "/includes/class-ngp-controller.php" ); // контроллер
 	
@@ -52,8 +53,6 @@
     // --------------- Объекты ---------------
     //-----------------------------------------
 
-    // подключаем бд гео
-    $SxGeo_NGP = new SxGeo_NGP( NGP_SX_GEO_DB );
     // подключаем класс контроллер
     $NGP = new NGP_controller();
     // подключаем класс геотаргетинга
@@ -72,7 +71,9 @@
     $NGP->theLang();
     
     // инициализация геоданных
-    $NGP->theGeo( $SxGeo_NGP );
+    if ( NGP_ISSET_SX_GEO_DB ) {
+        $NGP->theGeo();
+    }
     
     //-----------------------------------------
     // --------------- Шорткоды ---------------
