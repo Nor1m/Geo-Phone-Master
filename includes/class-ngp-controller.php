@@ -8,10 +8,23 @@
         }
     
         // функция вывода сообщений
-        public function msgPopup( $mode, $data, $btns ) {
+        public function msgPopup( $mode, $data ) {
             echo '<div class="ngp_msg_popup">';
-                echo '<div class="ngp_alert_popup popup_notice-' . $mode . '"><p>' . $data . '</p>';
-                    echo '<div class="ngp_popup_buttons">' . $btns . '</div>';
+                echo '<div class="ngp_alert_popup popup_notice-' . $mode . '"><p class="ngp_alert_popup_p">' . $data . '</p>';
+                    echo '<form id="ngp_sxgeo_load_form" method="POST" action="'. admin_url('admin-ajax.php') .'">';
+                        echo '<input type="hidden" name="action" value="ngp_sxgeo_load">';
+      	                echo '<div id="ngp_progressbar"><div id="ngp_progressbar_line"></div></div>';
+                        echo '<div class="ngp_popup_buttons">';
+                            echo '<button type="submit" id="start_install_db">' . __('Start installation','ngp') . '</button>';
+                            echo '<button onclick="return skipSxGeoLoad()" id="skip_install_db">' . __('Skip','ngp') . '</button>';
+                        echo '</div>';
+                        echo '<div class="ngp_popup_message">';
+                            echo '<p class="start">' . __('Please wait','ngp') . '...</p>';
+                            echo '<p class="success">' . __('Successfully!','ngp') . '</p>';
+                            echo '<p class="error">' . __('An error occurred, try the process again','ngp') . '</p>';
+                        echo '</div>';
+                        echo '<button onclick="return skipSxGeoLoad()" id="ngp_close_popup_install">✖</button>';
+                    echo '</form>';
                 echo '</div>';
             echo '</div>';
         }
@@ -251,9 +264,11 @@
             if ( ! NGP_ISSET_SX_GEO_DB ) {
                 $this->msgPopup( 
                     'warning', 
-                    __('To start the plugin, you need to install GeoDatabase','ngp'), 
-                    '<button id="start_install_db">' . __('Start installation','ngp') . '</button>'.
-                    '<button id="skip_install_db">' . __('Skip','ngp') . '</button>'
+                    __('To start working with the plugin, you need to install a geodatabase','ngp')
+                );
+                $this->msg(
+                    'warning',
+                    __('To start working with the plugin, you need to install a geodatabase','ngp')
                 );
                 return false;
             }

@@ -507,3 +507,14 @@ msgstr ""
 msgid "Widget themes"
 msgstr ""
 
+#@ default
+msgid "To start working with the plugin, you need to install a geodatabase"
+msgstr ""
+
+#@ default
+msgid "Start installation"
+msgstr ""
+
+#@ default
+msgid "Skip"
+msgstr ""

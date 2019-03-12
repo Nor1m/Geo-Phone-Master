@@ -857,18 +857,18 @@ p.ngp_text_simple {
 
 .ngp_msg_popup .ngp_alert_popup {
     position: fixed;
-    top: calc(50% - 120px);
+    top: calc(50% - 135px);
     left: calc(50% - 250px);
     background: white;
     width: 500px;
-    height: 240px;
+    min-height: 270px;
     border-radius: 5px;
     padding: 20px;
     overflow: hidden;
 }
 
-.ngp_msg_popup .ngp_alert_popup p {
-    font-size: 22px;
+.ngp_msg_popup .ngp_alert_popup .ngp_alert_popup_p {
+    font-size: 24px;
     text-align: center;
     font-weight: bold;
     color: #8e8e8e;
@@ -918,5 +918,84 @@ p.ngp_text_simple {
 .ngp_msg_popup .ngp_alert_popup .ngp_popup_buttons #skip_install_db:hover{
     cursor: pointer;
     background: rgba(97, 87, 243, 0.07);
+}
+
+#ngp_progressbar {
+    background: rgba(100, 86, 242, 0.1);
+    width: 100%;
+    display: none;
+    border-radius: 10px;
+    margin: 10px 0;
+}
+
+#ngp_progressbar.start{
+    display: flex;
+}
+
+#ngp_progressbar #ngp_progressbar_line {
+    display: inline-block;
+    background: #6456f2;
+    height: 15px;
+    border-radius: 20px;
+    width: 100%;
+}
+
+#ngp_progressbar #ngp_progressbar_line {
+    background-image: -webkit-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);
+    background-image: -webkit-linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);
+    background-image: -moz-linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);
+    background-image: -ms-linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);
+    background-image: -o-linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);
+    background-image: linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);
+    background-size: 35px 35px;
+}
+
+#ngp_progressbar.start #ngp_progressbar_line{
+    -webkit-animation: animate-stripes 2s linear infinite;
+    -moz-animation: animate-stripes 2s linear infinite;
+    animation: animate-stripes 2s linear infinite;
+}
+@-webkit-keyframes animate-stripes {
+    0% {background-position: 0 0;} 100% {background-position: 70px 0;}
+}
+
+@keyframes animate-stripes {
+    0% {background-position: 0 0;} 100% {background-position: 70px 0;}
+}
+@-moz-keyframes animate-stripes {
+    0% {background-position: 0 0;} 100% {background-position: 70px 0;}
+}
+
+.ngp_popup_message p{
+    display: none;
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    color: #a2a2a2;
+}
+
+.ngp_popup_message .start {
+    color: #a2a2a2;
+}
+
+.ngp_popup_message .success {
+    color: #42a252;
+}
+
+.ngp_popup_message .error {
+    color: #f56060;
+    font-size: 20px;
+}
+#ngp_close_popup_install {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    background: #f5f5f5;
+    border: none;
+    padding: 10px;
+}
+#ngp_close_popup_install:hover{
+    background: #f3f3f3;
+    cursor: pointer;
 }
 /*---------------------------*/

@@ -178,9 +178,10 @@
 	});
 	
 	// закрытие попапа установки геобд
-	jQuery('#skip_install_db').click(function() {
+	function skipSxGeoLoad() {
 		jQuery('.ngp_msg_popup').fadeOut(200);
-	})
+		return false;
+	}
 	
 	// смена темы в админке
     function ngsc_theme(mode, data){
@@ -195,6 +196,40 @@
             el.attr('data-duration', data);
         } 
     }
+	
+    // скачивание гео бд
+    jQuery(function(){
+        jQuery('#ngp_sxgeo_load_form').on('submit', function(e){
+            e.preventDefault();
+            var that = jQuery(this),
+                formData = new FormData(that.get(0));
+
+            jQuery('#ngp_progressbar').addClass('start');
+            jQuery('.ngp_popup_buttons').hide();
+            
+            jQuery('.ngp_popup_message p').hide();
+            jQuery('.ngp_popup_message .start').show(200);
+            
+            jQuery.ajax({
+                url: that.attr('action'),
+                type: that.attr('method'),
+                contentType: false,
+                processData: false,
+                data: formData,
+                success: function(res){
+                    jQuery('.ngp_alert_popup').css('min-height', 'auto');
+                    jQuery('.ngp_alert_popup_p').hide();
+                    jQuery('.ngp_popup_message p').hide();
+                    jQuery('#ngp_progressbar').removeClass('start');
+                    if( res == 1 ){
+                        jQuery('.ngp_popup_message .success').show(200);
+                    } else {
+                        jQuery('.ngp_popup_message .error').show(200);
+					}
+                }
+            });
+        });
+    });
 
 	//>>РАБОТА С КУКАМИ
 

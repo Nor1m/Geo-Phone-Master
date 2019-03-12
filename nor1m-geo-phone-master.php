@@ -29,6 +29,7 @@
     // --------------- Константы --------------
     //-----------------------------------------
 
+    define( "NGP_API_SX_GEO_DB_SERVER", "http://nor1m.ru/api/sxgeo/get" ); // сервер, где лежит sxgeo 
     define( "NGP_SX_GEO", dirname( __FILE__ ) . "/includes/class-sx-geo.php" ); // гео контроллер
     define( "NGP_SX_GEO_DB", dirname( __FILE__ ) . "/includes/sx-geo-city.dat" ); // база данных гео
     define( "NGP_ISSET_SX_GEO_DB", file_exists(NGP_SX_GEO_DB) ); // существование файла гео бд
@@ -99,7 +100,14 @@
         global $NGP_Multicity;
         return $NGP_Multicity->showPopup( $atts, $content );
     }
-	
+    
+    // скачивание sxgeo
+    add_action( 'wp_ajax_ngp_sxgeo_load', 'ngp_sxgeo_load' );
+    function ngp_sxgeo_load() {
+        $res = copy( NGP_API_SX_GEO_DB_SERVER, NGP_SX_GEO_DB );
+        wp_die($res);
+    }
+        
     //-----------------------------------------
     // ----------- Скрипты и стили ------------
     //-----------------------------------------
