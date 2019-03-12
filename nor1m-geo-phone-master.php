@@ -29,7 +29,8 @@
     // --------------- Константы --------------
     //-----------------------------------------
 
-    define( "API_SERVER", 'http://nor1m.ru/api/geo');
+    define( "NGP_SX_GEO", dirname( __FILE__ ) . "/includes/class-sx-geo.php" ); // гео контроллер
+    define( "NGP_SX_GEO_DB", dirname( __FILE__ ) . "/includes/sx-geo-city.dat" ); // база данных гео
 	
 	define( "NGP_CONTROLLER", dirname( __FILE__ ) . "/includes/class-ngp-controller.php" ); // контроллер
 	
@@ -44,12 +45,15 @@
 	define( "NGP_PLAGIN_PATH_ABS", WP_PLUGIN_URL .'/'. plugin_basename( dirname( __FILE__ ) ) ); // абсолютный путь к корню плагина
  
     // подключаем файлы
+    require_once NGP_SX_GEO;
     require_once NGP_CONTROLLER;
     
     //-----------------------------------------
     // --------------- Объекты ---------------
     //-----------------------------------------
 
+    // подключаем бд гео
+    $SxGeo_NGP = new SxGeo_NGP( NGP_SX_GEO_DB );
     // подключаем класс контроллер
     $NGP = new NGP_controller();
     // подключаем класс геотаргетинга
@@ -68,7 +72,7 @@
     $NGP->theLang();
     
     // инициализация геоданных
-    $NGP->theGeo();
+    $NGP->theGeo( $SxGeo_NGP );
     
     //-----------------------------------------
     // --------------- Шорткоды ---------------
@@ -82,8 +86,8 @@
     }
     
     // шорткод вывод гео данных пользователя
-    add_shortcode( 'NGP_MY_GEO', 'NGP_MyGeotShortcode' );
-    function NGP_MyGeotShortcode( $atts, $content ) {
+    add_shortcode( 'NGP_MY_GEO', 'NGP_MyGeoShortcode' );
+    function NGP_MyGeoShortcode( $atts, $content ) {
         global $NGP_GeoTargeting;
         return $NGP_GeoTargeting->GetUserGeo( $atts, $content );
     }

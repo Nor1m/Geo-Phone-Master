@@ -220,15 +220,15 @@
         public function theLang() {
            	$ngp_lang = get_option( 'ngp_lang' );
         	if ( $ngp_lang == 'name_ru' ) {
-        		define( "NGP_LANG_DATA", "ru" );
+        		define( "NGP_LANG_DATA", "name_ru" );
         	} else {
-        		define( "NGP_LANG_DATA", "en" );
+        		define( "NGP_LANG_DATA", "name_en" );
         	}
         }
         
         // айпи пользователя
         public function theUserIP() {
-            define( "NGP_USER_IP", '5.128.25.46' ); return true;
+            define( "NGP_USER_IP", "5.128.25.46" ); return false;
            	$ngp_const = get_option( 'ngp_const' );
         	if ( $ngp_const ) {
         		define( "NGP_USER_IP", $_SERVER[ $ngp_const ] );
@@ -238,53 +238,33 @@
         }
         
         // полная информация по IP
-        public function theGeo() {
-    
-            $lang = NGP_LANG_DATA;
-            $url = API_SERVER . '/all/' . $lang . '/' . NGP_USER_IP;
-            $ch = curl_init();
-            curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
-            curl_setopt($ch, CURLOPT_URL, $url);
-            curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-            curl_setopt($ch, CURLOPT_USERAGENT, "Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US) AppleWebKit/525.13 (KHTML, like Gecko) Chrome/0.A.B.C Safari/525.13");
-            $response_curl = curl_exec($ch);
-            curl_close($ch);
-            $response_json = json_decode($response_curl);
-           
-            if ( $response_json->status == 200 ) {
-                $response = $response_json->response;
-            } else {
-                return false;
-            }
-            
-            $lang = "name_" . $lang;
-            
-        	define( "NGP_USER_COUNTRY", strtolower( $response->country->$lang ) );
-        	define( "NGP_USER_REGION", strtolower( $response->region->$lang ) );
-        	define( "NGP_USER_CITY", strtolower( $response->city->$lang ) );
-            define( "NGP_USER_CITY_LAT", strtolower( $response->city->lat ) );
-            define( "NGP_USER_CITY_LON", strtolower( $response->city->lon ) );
-            define( "NGP_USER_COUNTRY_LAT", strtolower( $response->country->lat ) );
-            define( "NGP_USER_COUNTRY_LON", strtolower( $response->country->lon ) );
-            define( "NGP_USER_COUNTRY_ISO", strtolower( $response->country->iso ) );
-            define( "NGP_USER_REGION_ISO", strtolower( $response->region->iso ) );
+        public function theGeo( $SxGeo_NGP ) {
+            $info = $SxGeo_NGP->getCityFull( NGP_USER_IP );
+            define( "NGP_USER_COUNTRY", strtolower( $info['country'][ NGP_LANG_DATA ] ) );
+            define( "NGP_USER_REGION", strtolower( $info['region'][ NGP_LANG_DATA ] ) );
+            define( "NGP_USER_CITY", strtolower( $info['city'][ NGP_LANG_DATA ] ) );
+            define( "NGP_USER_CITY_LAT", strtolower( $info['city']['lat'] ) );
+            define( "NGP_USER_CITY_LON", strtolower( $info['city']['lon'] ) );
+            define( "NGP_USER_COUNTRY_LAT", strtolower( $info['country']['lat'] ) );
+            define( "NGP_USER_COUNTRY_LON", strtolower( $info['country']['lon'] ) );
+            define( "NGP_USER_COUNTRY_ISO", strtolower( $info['country']['iso'] ) );
+            define( "NGP_USER_REGION_ISO", strtolower( $info['region']['iso'] ) );
         }
     }
-    
     
     // класс для геотаргетинга
     class NGP_geotargeting extends NGP_controller {
         
         // функция для вывода геоданных пользователя
         public function GetUserGeo( $atts, $content ) {
-    	    if ( in_array('country', $atts) ) {
-    	        return NGP_USER_COUNTRY;
-    	    } else if ( in_array('region', $atts) ) {
-    	        return NGP_USER_REGION;
-    	    } else if ( in_array('city', $atts) ) {
-    	        return NGP_USER_CITY;
-    	    } else if ( in_array('ip', $atts) ) {
-    	        return NGP_USER_IP;
+            if ( in_array('country', $atts ) ) {
+                return NGP_USER_COUNTRY;
+            } else if ( in_array('region', $atts) ) {
+                return NGP_USER_REGION;
+            } else if ( in_array('city', $atts) ) {
+                return NGP_USER_CITY;
+            } else if ( in_array('ip', $atts) ) {
+                return NGP_USER_IP;
             } else if ( in_array('country_lon', $atts) ) {
                 return NGP_USER_COUNTRY_LON;
             } else if ( in_array('country_lat', $atts) ) {
@@ -297,9 +277,9 @@
                 return NGP_USER_COUNTRY_ISO;
             } else if ( in_array('region_iso', $atts) ) {
                 return NGP_USER_REGION_ISO;
-    	    } else {
-        	    return false;
-	        }
+            } else {
+                return false;
+            }
         }
         
         // функция для вывода готовых данных 
