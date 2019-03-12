@@ -19,7 +19,7 @@
                             echo '<button onclick="return skipSxGeoLoad()" id="skip_install_db">' . __('Skip','ngp') . '</button>';
                         echo '</div>';
                         echo '<div class="ngp_popup_message">';
-                            echo '<p class="start">' . __('Please wait','ngp') . '...</p>';
+                            echo '<p class="start">' . __('Please wait','ngp') . '</p>';
                             echo '<p class="success">' . __('Successfully!','ngp') . '</p>';
                             echo '<p class="error">' . __('An error occurred, try the process again','ngp') . '</p>';
                         echo '</div>';
@@ -264,10 +264,6 @@
             if ( ! NGP_ISSET_SX_GEO_DB ) {
                 $this->msgPopup( 
                     'warning', 
-                    __('To start working with the plugin, you need to install a geodatabase','ngp')
-                );
-                $this->msg(
-                    'warning',
                     __('To start working with the plugin, you need to install a geodatabase','ngp')
                 );
                 return false;
