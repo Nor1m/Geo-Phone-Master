@@ -111,9 +111,11 @@
                 // пропускаем как есть
 	    		$ngp_rules = json_decode( $text_array[2], true );
 	    		$ngp_multicity_rules = json_decode( $text_array[3], true );
-	    		$ngp_multicity_id = json_decode( $text_array[4], true );
-	    		$ngp_multicity_class = json_decode( $text_array[5], true );
-	    		$ngp_theme = json_decode( $text_array[6], true );
+                
+                // очищаем от ненужного, оставляя только текст
+                $ngp_multicity_id = sanitize_text_field( json_decode( $text_array[4], true ) );
+                $ngp_multicity_class = sanitize_text_field( json_decode( $text_array[5], true ) );
+                $ngp_theme = sanitize_text_field( json_decode( $text_array[6], true ) );
 	    		
 	    		// обновляем опции содержимым файла
 	    		update_option( 'ngp_lang', $ngp_lang );
@@ -162,7 +164,7 @@
             $ngp_theme = sanitize_text_field( $_POST['ngp_theme'] );
             $ngp_animation = sanitize_text_field( $_POST['ngp_animation'] );
             $ngp_duration = (int)$_POST['ngp_duration'];
-            $ngp_custom_styles = esc_attr($_POST['ngp_custom_styles']);
+            $ngp_custom_styles = esc_attr( $_POST['ngp_custom_styles'] );
             
     		// сохраняем данные в бд
             update_option( 'ngp_theme', $ngp_theme );
@@ -176,12 +178,16 @@
         
         public function saveRules() {
             $ngp_rules = array();
-            $ngp_post_array = $_POST['ngp_rules'];
+            
+            if ( empty( $_POST['ngp_rules'] ) ) return false;
             
             // перебираем массивы и пушим в один
-            foreach ( $ngp_post_array as $array ) {
-                $ngp_rules[] = $array;
+            foreach ( $_POST['ngp_rules'] as $array ) {
+                $ngp_rules[] = array_map( function( $text ) {
+                    return $this->filter( $text );
+                }, wp_unslash( $array ) );
             }
+            
             // сохраняем данные в бд
             update_option( 'ngp_rules', $ngp_rules );
             
@@ -191,12 +197,16 @@
         
         public function saveMulticityRules() {
             $ngp_multicity_rules = array();
-            $ngp_post_array = $_POST['ngp_multicity_rules'];
+            
+            if ( empty( $_POST['ngp_multicity_rules'] ) ) return false;
             
             // перебираем массивы и пушим в один
-            foreach ( $ngp_post_array as $array ) {
-                $ngp_multicity_rules[] = $array;
+            foreach ( $_POST['ngp_multicity_rules'] as $array ) {
+                $ngp_multicity_rules[] = array_map( function( $text ) {
+                    return $this->filter( $text );
+                }, wp_unslash( $array ) );
             }
+            
             // сохраняем данные в бд
             update_option( 'ngp_multicity_rules', $ngp_multicity_rules );
             
