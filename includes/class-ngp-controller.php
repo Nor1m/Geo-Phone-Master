@@ -284,15 +284,18 @@
         public function theGeo() {
             $SxGeo_NGP = new SxGeo_NGP( NGP_SX_GEO_DB );
             $info = $SxGeo_NGP->getCityFull( NGP_USER_IP );
-            define( "NGP_USER_COUNTRY", strtolower( $info['country'][ NGP_LANG_DATA ] ) );
-            define( "NGP_USER_REGION", strtolower( $info['region'][ NGP_LANG_DATA ] ) );
-            define( "NGP_USER_CITY", strtolower( $info['city'][ NGP_LANG_DATA ] ) );
-            define( "NGP_USER_CITY_LAT", strtolower( $info['city']['lat'] ) );
-            define( "NGP_USER_CITY_LON", strtolower( $info['city']['lon'] ) );
-            define( "NGP_USER_COUNTRY_LAT", strtolower( $info['country']['lat'] ) );
-            define( "NGP_USER_COUNTRY_LON", strtolower( $info['country']['lon'] ) );
-            define( "NGP_USER_COUNTRY_ISO", strtolower( $info['country']['iso'] ) );
-            define( "NGP_USER_REGION_ISO", strtolower( $info['region']['iso'] ) );
+            define( "NGP_USER_COUNTRY", mb_strtolower( $info['country'][ NGP_LANG_DATA ] ) );
+            define( "NGP_USER_REGION", mb_strtolower( $info['region'][ NGP_LANG_DATA ] ) );
+            define( "NGP_USER_CITY", mb_strtolower( $info['city'][ NGP_LANG_DATA ] ) );
+            define( "NGP_USER_CITY_LAT", mb_strtolower( $info['city']['lat'] ) );
+            define( "NGP_USER_CITY_LON", mb_strtolower( $info['city']['lon'] ) );
+            define( "NGP_USER_COUNTRY_LAT", mb_strtolower( $info['country']['lat'] ) );
+            define( "NGP_USER_COUNTRY_LON", mb_strtolower( $info['country']['lon'] ) );
+            define( "NGP_USER_COUNTRY_ISO", mb_strtolower( $info['country']['iso'] ) );
+            define( "NGP_USER_REGION_ISO", mb_strtolower( $info['region']['iso'] ) );
+            var_dump( NGP_LANG_DATA );
+            var_dump( $info['country']['name_ru'] );
+            var_dump( NGP_USER_COUNTRY );
         }
     }
     
@@ -343,17 +346,17 @@
     	            foreach ( $ngp_rules as $save_data ) {
     	                
     	                // если ярлык совпал
-    	                if ( strtolower( $save_data['label'] ) == strtolower( $atts['label'] ) ) { 
+    	                if ( mb_strtolower( $save_data['label'] ) == mb_strtolower( $atts['label'] ) ) { 
     	                    
     	                    // если страна учитывается
     	                    if ( $save_data['country'] ) {
     	                        
     	                        if ( $save_data['term'] == 1 ) { // если условие - равно
-        	                        if ( strtolower( $save_data['country'] ) != NGP_USER_COUNTRY ) { //если не совпали 
+        	                        if ( mb_strtolower( $save_data['country'] ) != NGP_USER_COUNTRY ) { //если не совпали 
         	                            continue; // возвращаем false
         	                        }
     	                        } else if ( $save_data['term'] == 2 ) { // если условие - не равно
-        	                        if ( strtolower( $save_data['country'] ) != NGP_USER_COUNTRY ) { //если не совпали 
+        	                        if ( mb_strtolower( $save_data['country'] ) != NGP_USER_COUNTRY ) { //если не совпали 
         	                           return $NGP->filter( $save_data['data'] ); // возвращаю данные
         	                        }
     	                        } 
@@ -363,11 +366,11 @@
     	                    if ( $save_data['region'] ) { 
     	                        
     	                        if ( $save_data['term'] == 1 ) { // если условие - равно
-        	                        if ( strtolower( $save_data['region'] ) != NGP_USER_REGION ) { //если не совпали
+        	                        if ( mb_strtolower( $save_data['region'] ) != NGP_USER_REGION ) { //если не совпали
         	                            continue; // возвращаем false
         	                        }
     	                        } else if ($save_data['term'] == 2 ) { // если условие - не равно
-        	                        if ( strtolower( $save_data['region'] ) != NGP_USER_REGION ) { //если не совпали 
+        	                        if ( mb_strtolower( $save_data['region'] ) != NGP_USER_REGION ) { //если не совпали 
         	                           return $NGP->filter( $save_data['data'] ); // возвращаю данные
         	                        }
     	                        } 
@@ -377,11 +380,11 @@
     	                    if ( $save_data['city'] ) { 
     	                        
     	                        if ($save_data['term'] == 1) { // если условие - равно
-        	                        if ( strtolower( $save_data['city'] ) != NGP_USER_CITY ) { //если не совпали 
+        	                        if ( mb_strtolower( $save_data['city'] ) != NGP_USER_CITY ) { //если не совпали 
         	                            continue; // возвращаем false
         	                        }
     	                        } else if ( $save_data['term'] == 2 ) { // если условие - не равно
-        	                        if ( strtolower( $save_data['city'] ) != NGP_USER_CITY ) { //если не совпали 
+        	                        if ( mb_strtolower( $save_data['city'] ) != NGP_USER_CITY ) { //если не совпали 
         	                           return $NGP->filter( $save_data['data'] ); // возвращаю данные
         	                        }
     	                        } 
