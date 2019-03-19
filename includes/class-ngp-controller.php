@@ -293,9 +293,6 @@
             define( "NGP_USER_COUNTRY_LON", mb_strtolower( $info['country']['lon'] ) );
             define( "NGP_USER_COUNTRY_ISO", mb_strtolower( $info['country']['iso'] ) );
             define( "NGP_USER_REGION_ISO", mb_strtolower( $info['region']['iso'] ) );
-            var_dump( NGP_LANG_DATA );
-            var_dump( $info['country']['name_ru'] );
-            var_dump( NGP_USER_COUNTRY );
         }
     }
     
