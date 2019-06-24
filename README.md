@@ -61,7 +61,7 @@ http://ngpm.syberia-shop.ru/test-geo-phone-master/
 [NGP_MY_GEO country_iso]
 ```
 #### Геотаргетинг: вывод ISO кода региона
-```html
+```php
 [NGP_MY_GEO region_iso]
 ```
 #### Геотаргетинг: вывод долготы страны
