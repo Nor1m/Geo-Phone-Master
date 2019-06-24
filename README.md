@@ -37,11 +37,11 @@ http://ngpm.syberia-shop.ru/test-geo-phone-master/
 ## Shortcodes
 
 #### Геотаргетинг
-```html
+```php
 [NGP label='Ярлык']Значение по умолчанию[/NGP]
 ```
 #### Геотаргетинг: вывод страны
-```html
+```php
 [NGP_MY_GEO country]
 ```
 #### Геотаргетинг: вывод региона
@@ -49,15 +49,15 @@ http://ngpm.syberia-shop.ru/test-geo-phone-master/
 [NGP_MY_GEO region]
 ```
 #### Геотаргетинг: вывод города
-```html
+```php
 [NGP_MY_GEO city]
 ```
 #### Геотаргетинг: вывод IP
-```html
+```php
 [NGP_MY_GEO ip]
 ```
 #### Геотаргетинг: вывод ISO кода страны
-```html
+```php
 [NGP_MY_GEO country_iso]
 ```
 #### Геотаргетинг: вывод ISO кода региона
@@ -65,23 +65,23 @@ http://ngpm.syberia-shop.ru/test-geo-phone-master/
 [NGP_MY_GEO region_iso]
 ```
 #### Геотаргетинг: вывод долготы страны
-```html
+```php
 [NGP_MY_GEO country_lon]
 ```
 #### Геотаргетинг: вывод широты страны
-```html
+```php
 [NGP_MY_GEO country_lat]
 ```
 #### Геотаргетинг: вывод долготы региона
-```html
+```php
 [NGP_MY_GEO region_lon]
 ```
 #### Геотаргетинг: вывод широты региона
-```html
+```php
 [NGP_MY_GEO region_lat]
 ```
 #### Виджет мультигород
-```html
+```php
 [NGSC def_city='Город по умолчанию' def_link='Ссылка по умолчанию']
 ```
 #### Список разрешенных тегов и атрибутов для правил геотаргетинга
