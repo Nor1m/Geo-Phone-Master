@@ -45,7 +45,7 @@ http://ngpm.syberia-shop.ru/test-geo-phone-master/
 [NGP_MY_GEO country]
 ```
 #### Геотаргетинг: вывод региона
-```html
+```php
 [NGP_MY_GEO region]
 ```
 #### Геотаргетинг: вывод города
