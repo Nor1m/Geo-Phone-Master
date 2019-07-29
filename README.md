@@ -7,6 +7,9 @@
 - Tested up to: 4.1
 - Stable tag: 4.9.8
 
+## Repository
+https://wordpress.org/plugins/geo-phone-master/
+
 ## Description
 The plugin is designed to allow the user to receive data depending on their geographical location. For example, display the phone on the site depending on the city, region, or city. Also has a multi function town, in order to allow the user to enter the desired subdomain site.
 
